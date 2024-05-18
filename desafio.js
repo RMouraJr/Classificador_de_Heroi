@@ -2,15 +2,15 @@
 
 const prompt = require("prompt-sync")();
 
-let nomeHeroi = prompt("Me diga seu nome, caro Herói: ");
+let nomeHeroi = prompt("Me diga seu nome, caro Herói: "); // entrada de dado, nome do Heroi
 
-let xpHeroi = parseInt(prompt("Agora me diga seus pontos de XP: "));
+let xpHeroi = parseInt(prompt("Agora me diga seus pontos de XP: ")); // entrada de dado, Xp do Herói
 
 console.log("Pois bem, " + nomeHeroi + ", você tem " + xpHeroi + " de experiência.");
 
-let classificador = prompt("Já que você chegou até aqui, que tal saber sua classificação? Você deseja saber sua classificação? ");
+let classificador = prompt("Já que você chegou até aqui, que tal saber sua classificação? Você deseja saber sua classificação? "); // Escolha , se deseja ser classificado ou não
 
-if (classificador.toLowerCase() === "sim") {
+if (classificador.toLowerCase() === "sim") { // se a respota for sim , (TRUE) e irá iniciar cada if abaixo
     let classificacao;
 
     if (xpHeroi < 1000) {
@@ -38,9 +38,9 @@ if (classificador.toLowerCase() === "sim") {
         classificacao = "Radiante";
     }
 
-    console.log(nomeHeroi + ", você é nível " + classificacao + ", meus parabéns!");
+    console.log(nomeHeroi + ", você é nível " + classificacao + ", meus parabéns!"); // Após testa e encontrar a opção em qual se encontra ele emite essa mensagem
 } 
 
 else {
-    console.log("Pois bem, " + nomeHeroi + ", até uma próxima, boa jornada.");
+    console.log("Pois bem, " + nomeHeroi + ", até uma próxima, boa jornada."); // Caso ele tenha opatdo por não ou qualquer outra palavra (FALSE), irá emitir essa mensagem e encerrar
 }
